@@ -101,9 +101,6 @@ export const signUp = async ({ password, ...userData }: SignUpParams) => {
 
     return parseStringify(newUser);
   } catch (error) {
-    if(error.response.message){
-      alert(error.response.message)
-    }
     console.error('Error', error);
   }
 }

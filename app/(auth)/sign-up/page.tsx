@@ -1,4 +1,5 @@
 import AuthForm from '@/components/AuthForm'
+import { useEffect } from 'react'
 
 const SignUp = async () => {
   return (

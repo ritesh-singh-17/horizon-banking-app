@@ -76,7 +76,7 @@ const AuthForm = ({ type }: { type: string }) => {
         if (response) router.push('/')
       }
     } catch (error) {
-      console.log(error);
+      console.log("cytvukylik", error);
     } finally {
       setIsLoading(false);
     }
@@ -106,8 +106,11 @@ const AuthForm = ({ type }: { type: string }) => {
             <p className="text-16 font-normal text-gray-600">
               {user
                 ? 'Link your account to get started'
-                : 'Please enter your details'
+                : 'Please enter your details.'
               }
+            </p>
+            <p className=' text-16 font-normal text-red-500'>
+              {type==='sign-up' && !user ? 'Note: Please enter US specific details' : ''}
             </p>
           </h1>
         </div>
